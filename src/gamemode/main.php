@@ -44,7 +44,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
           }
         }else{
           $player = $this->getServer()->getPlayerExact($args[1]);
-           if(!player){
+           if(!$player){
              $sender->sendMessage("{$args[1]}はオフラインです");
              return true;
           }
@@ -85,7 +85,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
   public function message($sender, $user, $mode, $gm){
     foreach($this->getServer()->getOnlinePlayers() as $players){
       if($players->isOp()){
-	if($sender != $user){
+	if($sender != $players){
           if($mode == "1"){
             $players->sendMessage("§7[{$sender->getName()}: あなたのゲームモードを {$gm} モードに変更しました]");  
           }
