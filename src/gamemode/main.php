@@ -12,8 +12,8 @@ use pocketmine\Player;
 
 class main extends PluginBase implements Listener{
 	
-	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-		if($command->getName() == "gm"){
+public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
+    if($command->getName() == "gm"){
       if($sender instanceof Player){
         if(!isset($args[1])){
           switch($args[0]){
