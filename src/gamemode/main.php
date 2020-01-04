@@ -87,7 +87,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
       if($players->isOp()){
 	if($sender != $user){
           if($mode == "1"){
-            $players->sendMessage("§7[{$sender->getNeme()}: あなたのゲームモードを {$gm} モードに変更しました]");  
+            $players->sendMessage("§7[{$sender->getName()}: あなたのゲームモードを {$gm} モードに変更しました]");  
           }
           if($mode == "2"){
             $players->sendMessage("§7[{$sender->getName()}: {$user->getName()}のゲームモードを {$gm} モードに変更しました]");
