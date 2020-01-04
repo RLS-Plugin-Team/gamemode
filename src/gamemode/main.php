@@ -43,12 +43,12 @@ public function onCommand(CommandSender $sender, Command $command, string $label
             break;
           }
         }else{
+          $player = $this->getServer()->getPlayerExact($args[1]);
+           if(!player){
+             $sender->sendMessage("{$args[1]}はオフラインです");
+             break;
+          }
           switch($args[0]){
-            $player = $this->getServer()->getPlayerExact($args[1]);
-            if(!player){
-              $sender->sendMessage("{$args[1]}はオフラインです");
-              break;
-            }
             case "0":
             $player->setGamemode("0");
             $player->sendMessage("あなたのゲームモードを サバイバル モード に変更しました");
