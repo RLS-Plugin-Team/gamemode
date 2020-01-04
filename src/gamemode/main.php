@@ -85,12 +85,14 @@ public function onCommand(CommandSender $sender, Command $command, string $label
   public function message($sender, $user, $mode, $gm){
     foreach($this->getServer()->getOnlinePlayers() as $players){
       if($players->isOp()){
-        if($mode == "1"){
-          $players->sendMessage("§8[{$sender}: あなたのゲームモードを {$gm} モードに変更しました]");  
-        }
-        if($mode == "2"){
-          $player->sendMessage("§8[{$sender}: {$user}のゲームモードを {$gm} モードに変更しました]");
-        }
+	if($sender != $user){
+          if($mode == "1"){
+            $players->sendMessage("§7[{$sender->getNeme()}: あなたのゲームモードを {$gm} モードに変更しました]");  
+          }
+          if($mode == "2"){
+            $players->sendMessage("§7[{$sender->getName()}: {$user->getName()}のゲームモードを {$gm} モードに変更しました]");
+          }
+	}
       }
     }
   }
