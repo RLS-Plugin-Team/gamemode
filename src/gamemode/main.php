@@ -76,7 +76,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
           }
         }
       }else{
-        $sender->sendMesaage("ゲーム内で実行してください");
+        $sender->sendMessage("ゲーム内で実行してください");
       }
     }
     return true;
