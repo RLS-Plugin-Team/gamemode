@@ -52,25 +52,25 @@ public function onCommand(CommandSender $sender, Command $command, string $label
             case "0":
             $player->setGamemode("0");
             $player->sendMessage("あなたのゲームモードを サバイバル モード に変更しました");
-            $sender->sendMessage("{$player->getName()}のゲームモードを サバイバル モード に変更しました");
+            $sender->sendMessage("{$player->getName()} のゲームモードを サバイバル モード に変更しました");
             $this->message($sender,$player,2,"サバイバル");
             break;
             case "1":
             $player->setGamemode("1");
             $player->sendMessage("あなたのゲームモードを クリエイティブ モード に変更しました");
-            $sender->sendMessage("{$player->getName()}のゲームモードを クリエイティブ モード に変更しました");
+            $sender->sendMessage("{$player->getName()} のゲームモードを クリエイティブ モード に変更しました");
             $this->message($sender,$player,2,"クリエイティブ");
             break;
             case "2":
             $player->setGamemode("2");
             $player->sendMessage("あなたのゲームモードを アドベンチャー モード に変更しました");
-            $sender->sendMessage("{$player->getName()}のゲームモードを アドベンチャー モード に変更しました");
+            $sender->sendMessage("{$player->getName()} のゲームモードを アドベンチャー モード に変更しました");
             $this->message($sender,$player,2,"アドベンチャー");
             break;
             case "3":
             $player->setGamemode("3");
             $player->sendMessage("あなたのゲームモードを スペクテイター モード に変更しました");
-            $sender->sendMessage("{$player->getName()}のゲームモードを スペクテイター モード に変更しました");
+            $sender->sendMessage("{$player->getName()} のゲームモードを スペクテイター モード に変更しました");
             $this->message($sender,$player,2,"スペクテイター");
             break;
           }
@@ -90,7 +90,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
             $players->sendMessage("§7[{$sender->getName()}: あなたのゲームモードを {$gm} モードに変更しました]");  
           }
           if($mode == "2"){
-            $players->sendMessage("§7[{$sender->getName()}: {$user->getName()}のゲームモードを {$gm} モードに変更しました]");
+            $players->sendMessage("§7[{$sender->getName()}: {$user->getName()} のゲームモードを {$gm} モードに変更しました]");
           }
 	}
       }
