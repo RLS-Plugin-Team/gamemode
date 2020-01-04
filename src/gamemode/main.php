@@ -17,7 +17,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
       if($sender instanceof Player){
 	if(!isset($args[0])){
 	  $sender->sendMessage("使い方: /gamemode <ゲームモード> <プレイヤー>");
-	  break;
+	  return true;
 	}
         if(!isset($args[1])){
           switch($args[0]){
@@ -46,7 +46,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
           $player = $this->getServer()->getPlayerExact($args[1]);
            if(!player){
              $sender->sendMessage("{$args[1]}はオフラインです");
-             break;
+             return true;
           }
           switch($args[0]){
             case "0":
