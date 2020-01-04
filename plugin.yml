@@ -1,0 +1,11 @@
+---
+name: gamemode
+main: gamemode\main
+version: 1.0.0
+api: 3.0.0
+author: narapon
+commands:
+  gm:
+    description: ゲームモード
+    usage: /gm <ゲームモード>
+...
